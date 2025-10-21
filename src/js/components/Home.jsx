@@ -26,10 +26,10 @@ const eliminarTarea = (posicion) =>{
 			<h1>todos</h1>
 			<div className=" paper">
 				<input type="text" placeholder="agrega una tarea" onChange={escribirTarea} value={tarea} onKeyDown={agregar}/>
-				<ul className="list-unstyled text-start ">
-					{lista.map((item,index)=>(<li key={index}>{item} <span onClick={()=>eliminarTarea(index)}> ✖</span></li>))}				
-				</ul>
-				<p>{lista.length} item left</p>            		
+					<ul className="list-unstyled text-start ">
+						{lista.map((item,index)=>(<li key={index}>{item} <span onClick={()=>eliminarTarea(index)}> χ</span></li>))}				
+					</ul>
+					<p>{lista.length} item left</p>            		
 			</div>
 		</div>
 	);
