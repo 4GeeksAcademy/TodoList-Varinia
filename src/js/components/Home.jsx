@@ -1,26 +1,36 @@
-import React from "react";
+import React,{useState} from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+	let[tarea, setTarea]=useState("")
+	let [lista, setLista]=useState([])
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+const escribirTarea = (event) =>{
+	setTarea (event.target.value)
+}
+const agregar = (event) =>{
+	if (event.key==="Enter") {
+		setLista ([...lista, tarea])
+		setTarea ("")
+	}
+	
+}
+const eliminarTarea = (posicion) =>{
+	setLista (lista.filter((item, index)=>index!==posicion))
+}
+
+	return (
+		<div id="todoList" className="shadow-sm border-bottom">
+			<h1>todos</h1>
+			<div className=" paper">
+				<input type="text" placeholder="agrega una tarea" onChange={escribirTarea} value={tarea} onKeyDown={agregar}/>
+				<ul className="list-unstyled text-start ">
+					{lista.map((item,index)=>(<li key={index}>{item} <span onClick={()=>eliminarTarea(index)}> ✖</span></li>))}				
+				</ul>
+				<p>{lista.length} item left</p>            		
+			</div>
 		</div>
 	);
 };
