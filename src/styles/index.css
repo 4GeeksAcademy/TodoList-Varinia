@@ -23,6 +23,7 @@
     align-items: center;
     background-color: #d3d3d3;
     
+    
 }
 p{
     justify-content: left !important;
@@ -30,8 +31,10 @@ p{
     font-family: 'Agdasima';font-size: 12px;
 }
 h1{
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Raleway', sans-serif;
     font-size: 60px; 
+    color: #e0bfbf;
+    letter-spacing: 2px;
     
 }
 input{
@@ -39,10 +42,29 @@ input{
     border-top: none;
     border-left: none;
     border-right: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #555;
 }
-span{
-    display: flex;
-    flex-direction:row;
-    justify-content: end;
+li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 }
-
+li span {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  cursor: pointer;
+  color: red;
+}
+li:hover span {
+  visibility: visible;
+  opacity: 1;
+}
