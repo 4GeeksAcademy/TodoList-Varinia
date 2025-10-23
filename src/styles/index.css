@@ -1,5 +1,4 @@
 .paper {
-  background: #fff;
   box-shadow:
     /* The top layer shadow */
     0 1px 1px rgba(0,0,0,0.15),
@@ -14,10 +13,10 @@
     /* Padding for demo purposes */
     padding: 30px;
     width: 600px;
-    height: 400px;
+    height: auto;
 }
 #todoList {
-    height: 550px;
+    height: 600px; ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,8 +62,9 @@ li span {
   transition: opacity 0.2s ease, visibility 0.2s ease;
   cursor: pointer;
   color: red;
+  
 }
 li:hover span {
   visibility: visible;
-  opacity: 1;
+  opacity: .25;
 }

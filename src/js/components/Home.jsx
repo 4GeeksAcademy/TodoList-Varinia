@@ -22,10 +22,10 @@ const eliminarTarea = (posicion) =>{
 }
 
 	return (
-		<div id="todoList" className="shadow-sm border-bottom">
+		<div id="todoList" className="shadow p-3 mb-5 bg-body-tertiary rounded border-bottom">
 			<h1>todos</h1>
-			<div className=" paper">
-				<input type="text" placeholder="agrega una tarea" onChange={escribirTarea} value={tarea} onKeyDown={agregar}/>
+			<div className="paper bg-body text-body">
+				<input type="text" placeholder="What needs to be done?" onChange={escribirTarea} value={tarea} onKeyDown={agregar}/>
 					<ul className="list-unstyled text-start ">
 						{lista.map((item,index)=>(<li key={index}>{item} <span onClick={()=>eliminarTarea(index)}> χ</span></li>))}				
 					</ul>
