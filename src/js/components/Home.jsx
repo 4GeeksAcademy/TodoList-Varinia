@@ -22,7 +22,7 @@ const eliminarTarea = (posicion) =>{
 }
 
 	return (
-		<div id="todoList" className="shadow p-3 mb-5 bg-body-tertiary rounded border-bottom">
+		<div id="todoList" className="p-3 mb-5 bg-body-tertiary rounded border-bottom">
 			<h1>todos</h1>
 			<div className="paper bg-body text-body">
 				<input type="text" placeholder="What needs to be done?" onChange={escribirTarea} value={tarea} onKeyDown={agregar}/>
